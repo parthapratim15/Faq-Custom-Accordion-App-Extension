@@ -1,0 +1,50 @@
+<div class="faq-header-content">
+    <div class="faq-header">FAQ</div>
+    <div class="faq-sub-header">Frequently Asked Question</div>
+</div>
+<ul class="faq-section" id="faq-section-id" data-theme-color="{{ block.settings.faq-color }}">
+    <li class="active">
+      <div class="section-title">
+        <h2>{{ block.settings.faq-title1 }}</h2>
+      </div>
+      <div class="section-content">
+        <p>{{ block.settings.faq-desc1 }}</p>
+      </div>
+    </li>
+    <li>
+      <div class="section-title">
+        <h2>{{ block.settings.faq-title2 }}</h2>
+      </div>
+      <div class="section-content">
+        <p>{{ block.settings.faq-desc2 }}</p>
+      </div>
+    </li>
+    <li>
+      <div class="section-title">
+        <h2>{{ block.settings.faq-title3 }}</h2>
+      </div>
+      <div class="section-content">
+        <p>{{ block.settings.faq-desc3 }}</p>
+      </div>
+    </li>
+
+  </ul>
+
+<script src="{{ 'faq.js' | asset_url }}" defer></script>
+<link type="text/css" href="{{ 'faq.css' | asset_url }}" rel="stylesheet">
+{% schema %}
+{
+  "name": "FAQ",
+  "target": "section",
+  "settings": [
+    { "type": "text", "id": "faq-title1", "label": "Faq Title 1", "default": "Sizing Guide" },
+    { "type": "textarea", "id": "faq-desc1", "label": "Faq Description 1", "default": "Need help with sizing? Our guide simplifies finding the perfect fit. Explore measurements and tips tailored to you." },
+    { "type": "text", "id": "faq-title2", "label": "Faq Title 2", "default": "Care Tips" },
+    { "type": "textarea", "id": "faq-desc2", "label": "Faq Description 2", "default": "Keep your garments fresh with our easy care tips. Learn how to wash and maintain them for lasting wear." },
+    { "type": "text", "id": "faq-title3", "label": "Faq Title 3", "default": "Returns Policy" },
+    { "type": "textarea", "id": "faq-desc3", "label": "Faq Description 3", "default": "Not satisfied? Learn about our hassle-free returns and exchanges policy. We're here to ensure your satisfaction." },
+    { "type": "color", "id": "faq-color", "label": "Theme Color", "default": "#c33131" }
+  ]
+}
+{% endschema %}
+
